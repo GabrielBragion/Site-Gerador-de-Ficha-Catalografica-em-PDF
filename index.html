@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Gerador de Fichas Catalográficas</title>
+  <meta name="description" content="Formulario para criação de fichas catalograficas da Universidade Santa Cecilia">
+</head>
+
+<body>
+  <div class="app"> <!-- Inicio APP -->
+    <header>
+      <img src="imagens/logoUnisanta 1.svg" alt="Logotipo da Universidade Santa Cecilia">
+      <img src="imagens/logoSIBI 1.svg" alt="Logotipo do sistema integrado de bibliotecas Unisanta">
+    </header>
+    <div class="main">
+      <h1 class="titulo">Gerador de fichas catalográficas</h1>
+
+      <!-- Formulario -->
+      <form>
+        <div class="wrap-input coluna1-2">
+          <label for="nomeAluno">Nome do autor</label>
+          <input id="nomeAluno" type="text" data-input="nomeAluno" required>
+        </div>
+        <div class="wrap-input coluna2-5">
+          <label for="sobrenomeAluno">Sobrenome do autor</label>
+          <input id="sobrenomeAluno" type="text" data-input="sobrenomeAluno" required>
+        </div>
+        <div class="wrap-input coluna1-5">
+          <label for="titulo">Titulo do trabalho</label>
+          <input id="titulo" type="text" data-input="titulo" required>
+        </div>
+        <div class="wrap-input coluna1-5">
+          <label for="subtitulo">Subtitulo do trabalho</label>
+          <input id="subtitulo" type="text" data-input="subtitulo">
+        </div>
+        <div class="wrap-input coluna1-3">
+          <label for="instituicao">Instituição</label>
+          <input id="instituicao" type="text" data-input="instituicao" required>
+        </div>
+        <div class="wrap-input coluna3-4">
+          <label for="cidade">Cidade</label>
+          <input id="cidade" type="text" data-input="instituicao" required>
+        </div>
+        <div class="wrap-input coluna4-5">
+          <label for="estado">Estado</label>
+          <input id="estado" placeholder="UF" type="text" class="uppercase align-center" data-input="instituicao" maxlength="2" required>
+        </div>
+        <div class="wrap-input coluna1-2">
+          <label for="ano">Ano</label>
+          <input id="ano" type="number" data-input="ano" required>
+        </div>
+        <div class="wrap-input coluna2-3">
+          <label for="folhas">Folhas</label>
+          <input id="folhas" type="number" data-input="folhas" class="align-center" placeholder="Nº" required>
+        </div>
+        <div class="wrap-input coluna3-5">
+          <label for="tipoTrabalho">Tipo de trabalho:</label>
+          <select name="tipoTrabalho" id="tipoTrabalho" data-input="tipoTrabalho" required>
+            <option value="inicial" disabled selected>Selecione um tipo:</option>
+            <option value="TCC">TCC</option>
+            <option value="Dissertação">Dissertação</option>
+            <option value="Dissertação (Mestrado)">Dissertação (Mestrado)</option>
+            <option value="Tese (Doutorado)">Tese (Doutorado)</option>
+          </select>
+        </div>
+        <div class="wrap-input coluna1-5 wrap-input-curso">
+          <label for="curso">Curso</label>
+          <input id="curso" type="text" data-input="curso" required>
+        </div>
+        <div class="wrap-input coluna1-2">
+          <label for="nomeOrientador">Nome do Orientador</label>
+          <input id="nomeOrientador" type="text" data-input="nomeOrientador" required>
+        </div>
+        <div class="wrap-input coluna2-5">
+          <label for="sobrenomeOrientador ">Sobrenome do orientador</label>
+          <input id="sobrenomeOrientador" type="text" data-input="sobrenomeOrientador" required>
+        </div>
+        <div class="wrap-input coluna1-2">
+          <label for="nomeCoorientador">Nome do Coorientador</label>
+          <input id="nomeCoorientador" type="text" data-input="nomeCoorientador">
+        </div>
+        <div class="wrap-input coluna2-5">
+          <label for="sobrenomeCoorientador ">Sobrenome do Coorientador</label>
+          <input id="sobrenomeCoorientador" type="text" data-input="sobrenomeCoorientador">
+        </div>
+        <div class="wrap-input coluna1-3">
+          <label for="assunto1">Assunto 1</label>
+          <input id="assunto1" type="text" data-input="assunto1">
+        </div>
+        <div class="wrap-input coluna3-5">
+          <label for="assunto2">Assunto 2</label>
+          <input id="assunto2" type="text" data-input="assunto2">
+        </div>
+        <div class="wrap-input coluna1-3">
+          <label for="assunto3">Assunto 3</label>
+          <input id="assunto3" type="text" data-input="assunto3">
+        </div>
+        <div class="wrap-input coluna3-5">
+          <label for="assunto4">Assunto 4</label>
+          <input id="assunto4" type="text" data-input="assunto4">
+        </div>
+        <div class="wrap-input coluna1-3">
+          <label for="assunto5">Assunto 5</label>
+          <input id="assunto5" type="text" data-input="assunto5">
+        </div>
+        <div class="wrap-input coluna3-5">
+          <label for="assunto6">Assunto 6</label>
+          <input id="assunto6" type="text" data-input="assunto6">
+        </div>
+        <div class="wrap-input coluna1-2">
+          <label for="codigo1">CDD</label>
+          <input id="codigo1" type="text" data-input="codigo1" required>
+        </div>
+        <div class="wrap-input coluna3-4">
+          <label for="codigo2">PHA</label>
+          <input id="codigo2" type="text" data-input="codigo2" required>
+        </div>
+        <p class="email-adm">Solicite o CDD e PHA através dos e-mails abaixo:<br><a href="mailto:amrs@unisanta.br">amrs@unisanta.br</a> e <a href="mailto:rafaelmicco@unisanta.br">rafaelmicco@unisanta.br</a></p>
+      </form>
+
+      <!-- Ficha Catalográficas-->
+
+      <div class="wrap-ficha">
+        <!-- Inicio informação que sera gerada no PDF -->
+        <div class="ficha">
+          <div class="ficha-info">
+            <div class="cover"></div>
+            <div class="extra">
+              <p><span data-value="codigo1"></span></p>
+              <p><span data-value="codigo2"></span></p>
+            </div>
+            <div class="ficha-info-item">
+              <p><span data-value="nomeInvertidoAluno"></span>.</p>
+              <p class="text-indent">
+                <span data-value="titulo"></span><span data-value="subtitulo"></span> / <span data-value="nomeAluno"></span> <span data-value="sobrenomeAluno"></span>.
+              </p>
+              <p class="text-indent"><span data-value="ano"></span>.</p>
+              <p class="text-indent"><span data-value="folhas"></span> f.</p>
+            </div>
+            <div class="ficha-info-item">
+              <p class="text-indent">Orientador: <span data-value="nomeOrientador"></span> <span data-value="sobrenomeOrientador"></span>.</p>
+              <p class="text-indent"><span data-value="nomeCoorientador"></span> <span data-value="sobrenomeCoorientador"></span></p>
+            </div>
+            <div class="ficha-info-item">
+              <p class="text-indent"><span data-value="tipoTrabalho"></span> - <span data-value="instituicao"></span>, <span data-value="curso"></span> <span data-value="cidade"></span>, <span data-value="estado"></span>, <span data-value="ano"></span>.</p>
+            </div>
+            <div class="ficha-info-item">
+              <span class="extra-padding-left"><span data-value="assunto1" id="1."></span></span>
+              <span><span id="2." data-value="assunto2"></span></span>
+              <span><span id="3." data-value="assunto3"></span></span>
+              <span><span id="4." data-value="assunto4"></span></span>
+              <span><span id="5." data-value="assunto5"></span></span>
+              <span><span id="6." data-value="assunto6"></span></span>
+              <span>I. <span data-value="nomeOrientadorInverido"></span></span>. II. <span data-value="titulo"></span>.</span>
+            </div>
+          </div>
+          <p class="align-center elaborado">Elaborado pelo SIBi - Sistema Integrado de Bibliotecas - Unisanta</p>
+        </div>
+        <!-- Fim informação que sera gerada no PDF -->
+
+        <div class="wrap-btn">
+          <button class="btn btn-gerar-ficha">Visualizar</button>
+          <button class="btn btn-gerar-pdf">Gerar PDF</button>
+          <button class="btn-cancelar">Cancelar</button>
+          <p class="erro">ERRO: Deve preencher todos os campos obrigatorios</p>
+        </div>
+
+      </div>
+    </div>
+
+    <p class="author">Desenvolvido por Gabriel Bragion de Micco</p>
+  </div> <!-- fim da APP -->
+
+  <script src="html2pdf.bundle.min.js"></script> <!-- Biblioteca que gera o PDF -->
+  <script src="index.js"></script> <!-- Codigo que pega os valores do formulario e cria o item que se tornara o PDF -->
+
+</body>
+
+</html>
